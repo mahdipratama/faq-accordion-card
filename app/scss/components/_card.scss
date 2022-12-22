@@ -4,6 +4,10 @@
   position: relative;
   background-color: var(--card-bg);
   border-radius: rem(30);
+  background-image: url('/images/bg-pattern-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: rem(241);
 
   &__img {
     position: absolute;

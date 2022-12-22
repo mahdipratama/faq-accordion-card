@@ -57,6 +57,10 @@ a:active {
   position: relative;
   background-color: var(--card-bg);
   border-radius: 1.875rem;
+  background-image: url("/images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 15.0625rem;
 }
 .card__img {
   position: absolute;
