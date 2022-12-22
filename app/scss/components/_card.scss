@@ -1,0 +1,85 @@
+@use '../utilities' as *;
+
+.card {
+  position: relative;
+  background-color: var(--card-bg);
+  border-radius: rem(30);
+
+  &__img {
+    position: absolute;
+    top: -3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: rem(241);
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    font-size: rem(34);
+    text-align: center;
+    margin-top: rem(135);
+    margin-bottom: rem(37);
+  }
+
+  & .question {
+    padding: 0 rem(23) rem(27);
+
+    &__collapse {
+      border-bottom: 1px solid var(--light-gray);
+      margin-bottom: rem(20);
+
+      &-button {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin-bottom: rem(14);
+        border: none;
+        background-color: var(--card-bg);
+        cursor: pointer;
+
+        &:focus,
+        &:active {
+          color: var(--dark-blue);
+          font-weight: 700;
+        }
+
+        & span {
+          font-size: rem(14);
+          color: var(--dark-gray);
+
+          &:hover {
+            color: var(--soft-red);
+          }
+        }
+
+        & .chevron {
+          transition: transform 0.3s ease-in;
+
+          &.rotate {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
+    &__answer {
+      font-size: rem(12);
+      color: var(--gray);
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+
+      &.show {
+        max-height: rem(32);
+        opacity: 1;
+      }
+    }
+  }
+}
