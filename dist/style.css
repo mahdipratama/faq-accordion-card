@@ -63,6 +63,7 @@ a:active {
   max-width: 30.0625rem;
   background-color: var(--card-bg);
   border-radius: 1.875rem;
+  box-shadow: rgba(0, 0, 0, 0.478) 0px 24px 46px -5px;
 }
 @media (max-width: 56.1875rem) {
   .card {
