@@ -107,6 +107,7 @@ a:active {
 }
 .card .question__collapse-button span:hover {
   color: var(--soft-red);
+  font-weight: 700;
 }
 .card .question__collapse-button .chevron {
   transition: transform 0.3s ease-in;
