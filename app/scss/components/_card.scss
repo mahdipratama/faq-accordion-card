@@ -57,9 +57,9 @@
         border: none;
         background-color: var(--card-bg);
         cursor: pointer;
+        transition: all 0.3s ease;
 
-        &:focus,
-        &:active {
+        &:focus {
           color: var(--dark-blue);
           font-weight: 700;
         }
@@ -70,7 +70,6 @@
 
           &:hover {
             color: var(--soft-red);
-            font-weight: 700;
           }
         }
 
