@@ -2,24 +2,36 @@
 
 .card {
   position: relative;
+  max-width: rem(481);
   background-color: var(--card-bg);
   border-radius: rem(30);
-  background-image: url('/images/bg-pattern-mobile.svg');
-  background-repeat: no-repeat;
-  background-position: center 0;
-  background-size: rem(241);
 
-  &__img {
-    position: absolute;
-    top: -3%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: rem(241);
+  @include breakpoint-down(medium) {
+    background-image: url('/images/bg-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: rem(241);
 
-    & img {
-      width: 100%;
-      height: 100%;
+    &__img {
+      position: absolute;
+      top: -3%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: rem(241);
+
+      & img {
+        width: 100%;
+        height: 100%;
+      }
     }
+
+    & .question {
+      padding: 0 rem(23) rem(27);
+    }
+  }
+
+  .box {
+    display: none;
   }
 
   &__title {
@@ -30,8 +42,6 @@
   }
 
   & .question {
-    padding: 0 rem(23) rem(27);
-
     &__collapse {
       border-bottom: 1px solid var(--light-gray);
       margin-bottom: rem(20);
@@ -84,6 +94,58 @@
       &.show {
         max-height: rem(32);
         opacity: 1;
+        margin-bottom: rem(20);
+      }
+    }
+  }
+
+  @include breakpoint-up(large) {
+    display: grid;
+    max-width: rem(920);
+    min-height: rem(509);
+    grid-template-columns: repeat(2, 1fr);
+    margin-inline: rem(40);
+
+    &__img {
+      position: relative;
+      overflow: hidden;
+      background-image: url('/images/bg-pattern-desktop.svg');
+      background-repeat: no-repeat;
+      background-position: 114% 72%;
+      background-size: auto;
+
+      & .woman {
+        width: 100%;
+        min-height: 70%;
+        position: absolute;
+        top: 10.5%;
+        left: -15%;
+      }
+    }
+
+    & .box {
+      display: block;
+      position: absolute;
+      left: -10%;
+      top: 37%;
+      z-index: 1;
+    }
+
+    &__wrapper {
+      padding: 70px 95px 0 0;
+    }
+
+    &__title {
+      margin-top: 0;
+      margin-bottom: rem(40);
+      text-align: left;
+    }
+  }
+
+  & .question {
+    &__collapse {
+      &-button {
+        margin-bottom: rem(16);
       }
     }
   }
